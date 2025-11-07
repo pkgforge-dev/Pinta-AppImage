@@ -1,0 +1,2 @@
+# Pinta-AppImage
+WIP

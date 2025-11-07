@@ -24,8 +24,7 @@ sed -i \
 	./AppDir/bin/pinta
 
 for d in ./AppDir/share/icons/hicolor/*; do
-	mkdir -p "$d"/actions
-	cp -r /usr/share/icons/hicolor/"${d##*/}"/actions "$d"/actions || :
+	cp -r /usr/share/icons/hicolor/"${d##*/}"/actions "$d" || :
 done
 
 ./quick-sharun --make-appimage

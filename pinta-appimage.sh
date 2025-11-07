@@ -22,6 +22,12 @@ sed -i \
 	-e 's|#!/usr/bin/env sh|#!/bin/sh|g'  \
 	-e 's|prefix=/usr|prefix=${APPDIR}|g' \
 	./AppDir/bin/pinta
+
+for d in ./AppDir/share/icons/hicolor/*; do
+	mkdir -p "$d"/actions
+	cp -r /usr/share/icons/hicolor/"${d##*/}"/actions "$d"/actions || :
+done
+
 ./quick-sharun --make-appimage
 
 mkdir -p ./dist

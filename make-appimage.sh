@@ -14,9 +14,7 @@ export DEPLOY_OPENGL=1
 export DEPLOY_DOTNET=1
 
 # Deploy dependencies
-wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
-chmod +x ./quick-sharun
-./quick-sharun \
+quick-sharun \
 	/usr/bin/pinta \
 	/usr/lib/pinta \
 	/usr/share/icons/hicolor/*/actions

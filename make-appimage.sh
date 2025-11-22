@@ -14,10 +14,7 @@ export DEPLOY_OPENGL=1
 export DEPLOY_DOTNET=1
 
 # Deploy dependencies
-quick-sharun \
-	/usr/bin/pinta \
-	/usr/lib/pinta \
-	/usr/share/icons/hicolor/*/actions
+quick-sharun /usr/bin/pinta /usr/lib/pinta
 
 # Additional changes can be done in between here
 

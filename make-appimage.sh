@@ -17,7 +17,7 @@ cp -r /usr/lib/pinta/* ./AppDir/bin
 ln -s ./Pinta ./AppDir/bin/pinta
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/* /usr/share/pinta
+quick-sharun ./AppDir/bin/*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage

@@ -14,8 +14,6 @@ export GTK_CLASS_FIX=1
 export DEPLOY_OPENGL=1
 export DEPLOY_DOTNET=1
 
-patchelf --remove-needed libappstream.so.5 /usr/lib/libadwaita-1.so.0
-
 # Deploy dependencies
 quick-sharun /usr/bin/pinta /usr/lib/pinta /usr/share/pinta
 

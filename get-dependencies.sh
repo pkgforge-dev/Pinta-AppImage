@@ -57,10 +57,9 @@ git clone --depth 1 --branch 3.1.2 https://github.com/PintaProject/Pinta.git ./p
 	# dlopen'd lazily only when tracing, would drag in liblttng-ust
 	rm -f /usr/lib/pinta/libcoreclrtraceptprovider.so
 
-	mkdir -p /usr/share/pinta
-	cp -r /usr/lib/pinta/icons /usr/share/pinta
-	sed 's/^_//' xdg/com.github.PintaProject.Pinta.desktop.in > ./AppDir/Pinta.desktop
-	cp -r /usr/lib/pinta/locale/. /usr/share/locale/
+	cp -r /usr/lib/pinta/icons/hicolor /usr/share/icons
+	sed 's/^_//' ./xdg/com.github.PintaProject.Pinta.desktop.in > /usr/share/applications/Pinta.desktop
+	cp -r /usr/lib/pinta/locale/. /usr/share/locale
 
 	awk -F'<|>' '/<Version>/{print $3; exit}' ./Directory.Build.props | sed 's/\.0$//' > ~/version
 )

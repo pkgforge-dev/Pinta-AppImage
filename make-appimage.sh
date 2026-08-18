@@ -5,7 +5,7 @@ set -eu
 ARCH=$(uname -m)
 export ARCH
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook"
+export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DESKTOP=/usr/share/applications/Pinta.desktop
 export ICON=/usr/share/icons/hicolor/96x96/apps/com.github.PintaProject.Pinta.png
